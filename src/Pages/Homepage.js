@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Features from "../components/Features";
-import Products from "../components/Products";
-import About from "../components/About";
-import Testimonials from "../components/Testimonials";
-import Newsletter from "../components/Newsletter";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import CartModal from "../components/CartModal";
+import Header from "../components/accueil/Header";
+import Hero from "../components/accueil/Hero";
+import Features from "../components/accueil/Features";
+import Products from "../components/accueil/Products";
+import About from "../components/accueil/About";
+import Testimonials from "../components/accueil/Testimonials";
+import Newsletter from "../components/accueil/Newsletter";
+import Contact from "../components/accueil/Contact";
+import Footer from "../components/accueil/Footer";
+import CartModal from "../components/accueil/CartModal";
 
 const Homepage = () => {
   const [cartItems, setCartItems] = useState([]);

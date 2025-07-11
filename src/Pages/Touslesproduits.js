@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Header from "../components/HeaderProduits";
-import Footer from "../components/Footer";
-import CartModal from "../components/CartModal";
-import HeaderProduits from "../components/HeaderProduits";
+import Header from "../components/accueil/HeaderProduits";
+import Footer from "../components/accueil/Footer";
+import CartModal from "../components/accueil/CartModal";
+import HeaderProduits from "../components/accueil/HeaderProduits";
 
 // Données des catégories
 const categories = [

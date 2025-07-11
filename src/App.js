@@ -9,6 +9,8 @@ import Dashboard from "./Pages/Dashboard";
 import ClientList from "./Pages/ClientList";
 import ProduitList from "./Pages/ProduitList";
 import CommandeList from "./Pages/CommandeList";
+import UserPage from "./Pages/UserPage"; // Import de la page utilisateur
+import ContactPage from "./Pages/ContactPage"; // Import de la page de contact
 
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,6 +39,11 @@ const App = () => {
           <Route path="/produits" element={<ProduitList />} />
           <Route path="/commandes" element={<CommandeList />} />
 
+          {/* Routes Client */}
+          <Route path="/user" element={<UserPage />} />
+
+          {/* Route Contact */}
+          <Route path="/contactez-nous" element={<ContactPage />} />
         </Routes>
 
         <ToastContainer position="bottom-right" autoClose={3000} />

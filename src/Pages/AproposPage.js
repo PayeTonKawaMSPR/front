@@ -7,8 +7,8 @@ import About from "../components/About/TeamSection";
 import Testimonials from "../components/About/ValuesSection";
 import Newsletter from "../components/About/ProcessSection";
 import Contact from "../components/About/Testimonials";
-import Footer from "../components/About/Footer";
-import CartModal from "../components/CartModal";
+import Footer from "../components/accueil/Footer";
+import CartModal from "../components/accueil/CartModal";
 import CallToAction from "../components/About/CallToAction";
 
 const AproposPage = () => {
