@@ -17,7 +17,7 @@ const Header = ({ cartItemCount, onCartClick }) => {
 
         {/* Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <a href="/Homepage" className="text-white hover:text-black transition">Accueil</a>
+          <a href="/" className="text-white hover:text-black transition">Accueil</a>
           <a href="Touslesprosuits" className="text-white hover:text-black transition">Produits</a>
           <a href="AproposPage.js" className="text-white hover:text-black transition">À propos</a>
           <a href="#contact" className="text-white hover:text-black transition">Contact</a>

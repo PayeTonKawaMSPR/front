@@ -1,5 +1,5 @@
 import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart, FaUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -8,6 +8,10 @@ const Header = ({ cartItemCount, onCartClick }) => {
 
   const handleNavigateToSection = (sectionId) => {
     navigate(`/#${sectionId}`);
+  };
+
+  const onUserClick = () => {
+    navigate("/connexionUser"); // Redirige vers la page de connexion
   };
 
   return (
@@ -51,20 +55,33 @@ const Header = ({ cartItemCount, onCartClick }) => {
           </button>
         </nav>
 
-        {/* Panier */}
-        <button
-          type="button"
-          aria-label="Voir le panier"
-          className="relative cursor-pointer bg-transparent border-none p-0 focus:outline-none"
-          onClick={onCartClick}
-        >
-          <FaShoppingCart size={24} className="text-white hover:text-black transition" />
-          {cartItemCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2 py-0.5">
-              {cartItemCount}
-            </span>
-          )}
-        </button>
+        {/* Actions utilisateur (panier + compte) */}
+        <div className="flex items-center space-x-4">
+          {/* Icône utilisateur (bonhomme) */}
+          <button
+            type="button"
+            aria-label="Se connecter"
+            className="cursor-pointer bg-transparent border-none p-0 focus:outline-none"
+            onClick={onUserClick}
+          >
+            <FaUser size={24} className="text-white hover:text-black transition" />
+          </button>
+
+          {/* Icône panier */}
+          <button
+            type="button"
+            aria-label="Voir le panier"
+            className="relative cursor-pointer bg-transparent border-none p-0 focus:outline-none"
+            onClick={onCartClick}
+          >
+            <FaShoppingCart size={24} className="text-white hover:text-black transition" />
+            {cartItemCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2 py-0.5">
+                {cartItemCount}
+              </span>
+            )}
+          </button>
+        </div>
       </div>
     </header>
   );

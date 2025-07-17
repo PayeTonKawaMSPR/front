@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Paiement from "./paiement";
 import PropTypes from "prop-types";
+import { toast } from 'react-toastify';
 
 const CartModal = ({ cartItems, onClose, onRemoveItem, onUpdateCart }) => {
   const [showPaiement, setShowPaiement] = useState(false);
